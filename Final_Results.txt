@@ -1,0 +1,102 @@
+k = imread('cameraman.tif');
+>> k = double(k);
+>> k5 = k + 5 * randn(size(k));
+>> k10 = k + 10 * randn(size(k));
+>> k15 = k + 15 * randn(size(k));
+>> k20 = k + 20 * randn(size(k));
+>> k25 = k + 25 * randn(size(k));
+>> nlm5 = NLmeansfilter(k5, 10, 2, 5);
+>> fast_nlm5 = fast_nl_means(k5, 2, 10, 5);
+>> p_nlm5 = PNLM(k5, 2, 10, 5, 1);
+>> disp(['psnr of denoising output using nlm=' num2str(psnr(nlm5,k)) 'dB'])
+psnr of denoising output using nlm=-13.859dB
+>> disp(['psnr of denoising output using fast_nlm=' num2str(psnr(fast_nlm5,k)) 'dB'])
+psnr of denoising output using fast_nlm=-13.8316dB
+>> disp(['psnr of denoising output using p_nlm=' num2str(psnr(p_nlm5,k)) 'dB'])
+psnr of denoising output using p_nlm=-10.7408dB
+>> nlm5 = NLmeansfilter(k5, 10, 2, 5);
+'NLmeansfilter' is not found in the current folder or on the MATLAB path, but exists in:
+    /home/sai-girish/Documents/Comps/7th-Sem/Digital Image Processing/Matlab
+    Practice/Fast_Nonlocal_Means/Fast_Nonlocal_Means
+    /home/sai-girish/Documents/Comps/7th-Sem/Digital Image Processing/Matlab Practice/testnlm
+
+Change the MATLAB current folder or add its folder to the MATLAB path.
+ 
+>> nlm10 = NLmeansfilter(k10, 10, 2, 10);
+>> fast_nlm10 = fast_nlm_means(k10, 2, 10, 10);
+Unrecognized function or variable 'fast_nlm_means'.
+ 
+>> fast_nlm10 = fast_nlm_means(k10, 2, 10, 10);
+Unrecognized function or variable 'fast_nlm_means'.
+ 
+>> fast_nlm10 = fast_nlm_means(k10, 2, 10, 10);
+Unrecognized function or variable 'fast_nlm_means'.
+ 
+Did you mean:
+>> fast_nlm10 = fast_nl_means(k10, 2, 10, 10);
+>> p_nlm10 = PNLM(k10, 2, 10, 10, 1);
+>> 
+>> p_nlm10 = PNLM(k10, 2, 10, 10, 1);
+>> disp(['psnr of denoising output using nlm=' num2str(psnr(nlm10,k)) 'dB'])
+psnr of denoising output using nlm=-16.0822dB
+>> disp(['psnr of denoising output using fast_nlm=' num2str(psnr(fast_nlm10,k)) 'dB'])
+psnr of denoising output using fast_nlm=-16.0783dB
+>> disp(['psnr of denoising output using p_nlm=' num2str(psnr(p_nlm10,k)) 'dB'])
+psnr of denoising output using p_nlm=-15.1302dB
+>> nlm15 = NLMeansfilter(k15, 10, 2, 15);
+Cannot find an exact (case-sensitive) match for 'NLMeansfilter'
+
+The closest match is: NLmeansfilter in /home/sai-girish/Documents/Comps/7th-Sem/Digital Image Processing/Matlab
+Practice/testnlm/NLmeansfilter.m
+ 
+Did you mean:
+>> nlm15 = NLmeansfilter(k15, 10, 2, 15);
+>> fast_nlm15 = fast_nl_means(k15, 2, 10, 15);
+>> p_nlm15 = PNLM(k15, 2, 10, 15, 1);
+>> disp(['psnr of denoising output using nlm=' num2str(psnr(nlm15,k)) 'dB'])
+psnr of denoising output using nlm=-17.6136dB
+>> disp(['psnr of denoising output using fast_nlm=' num2str(psnr(fast_nlm15,k)) 'dB'])
+psnr of denoising output using fast_nlm=-17.6082dB
+>> disp(['psnr of denoising output using p_nlm=' num2str(psnr(p_nlm15,k)) 'dB'])
+psnr of denoising output using p_nlm=-17.3326dB
+>> nlm20 = NLmeansfilter(k20, 10, 2, 20);
+>> fast_nlm20 = fast_nl_means(k20, 2, 10, 20);
+>> p_nlm20 = PNLM(k20, 2, 10, 20, 1);
+>> disp(['psnr of denoising output using nlm=' num2str(psnr(nlm20,k)) 'dB'])
+psnr of denoising output using nlm=-18.8037dB
+>> disp(['psnr of denoising output using fast_nlm=' num2str(psnr(fast_nlm20,k)) 'dB'])
+psnr of denoising output using fast_nlm=-18.7978dB
+>> disp(['psnr of denoising output using p_nlm=' num2str(psnr(p_nlm20,k)) 'dB'])
+psnr of denoising output using p_nlm=-18.746dB
+>> nlm25 = NLmeansfilter(k25, 10, 2, 25);
+>> fast_nlm25 = fast_nl_means(k25, 2, 10, 25);
+>> p_nlm25 = PNLM(k25, 2, 10, 25, 1);
+>> disp(['psnr of denoising output using nlm=' num2str(psnr(nlm25,k)) 'dB'])
+psnr of denoising output using nlm=-19.8006dB
+>> disp(['psnr of denoising output using fast_nlm=' num2str(psnr(fast_nlm25,k)) 'dB'])
+psnr of denoising output using fast_nlm=-19.7999dB
+>> disp(['psnr of denoising output using p_nlm=' num2str(psnr(p_nlm25,k)) 'dB'])
+psnr of denoising output using p_nlm=-19.6665dB
+
+
+
+
+
+
+---------------------------------RESULT----------------------------------------------
+psnr of denoising output using nlm on image with noise of sd 5 =34.2604dB
+psnr of denoising output using fast_nlm on image with noise of sd 5 =34.2818dB
+psnr of denoising output using p_nlm on image with noise of sd 5 =37.3817dB
+psnr of denoising output using nlm on image with noise of sd 10 =32.031dB
+psnr of denoising output using fast_nlm on image with noise of sd 10 =32.0432dB
+psnr of denoising output using p_nlm on image with noise of sd 10 =33.0513dB
+psnr of denoising output using nlm on image with noise of sd 15 =30.5117dB
+psnr of denoising output using fast_nlm on image with noise of sd 15 =30.5108dB
+psnr of denoising output using p_nlm on image with noise of sd 15 =30.814dB
+psnr of denoising output using nlm on image with noise of sd 20 =29.2255dB
+psnr of denoising output using fast_nlm on image with noise of sd 20 =29.2226dB
+psnr of denoising output using p_nlm on image with noise of sd 20 =29.3868dB
+psnr of denoising output using nlm on image with noise of sd 25 =28.1023dB
+psnr of denoising output using fast_nlm on image with noise of sd 25 =28.1065dB
+psnr of denoising output using p_nlm on image with noise of sd 25 =28.3633dB
+-------------------------------------------------------------------------------------
